@@ -29,6 +29,8 @@ private slots:
     void time_is_up();
     void on_pushButton_2_released();
 
+    void on_label_2_linkActivated(const QString &link);
+
 private:
     Ui::MainWindow *ui;
 };

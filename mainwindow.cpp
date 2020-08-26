@@ -19,6 +19,7 @@ MainWindow::MainWindow(QWidget *parent)
     gif_joker = new QMovie("./joker_alpha.gif");
     ui->label_2->setMovie(gif_joker);
     gif_joker->start();
+    gif_joker->stop();
 }
 
 MainWindow::~MainWindow()
@@ -33,6 +34,7 @@ void MainWindow::on_pushButton_released()
     ui->label->setText("Set for hour");
     sound_notif->stop();
     gif_joker->stop();
+    this->hide();
 }
 
 void MainWindow::on_pushButton_2_released()
@@ -52,5 +54,3 @@ void MainWindow::time_is_up()
     gif_joker->start();
     this->show();
 }
-
-
